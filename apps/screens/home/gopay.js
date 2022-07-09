@@ -1,12 +1,14 @@
 import React from 'react';
 import { View, Text, Image} from "react-native";
+import appItem from "../../../app.json"
+
 const Gopay = () => {
     return <View style={{ padding: 15, backgroundColor: "lightblue", flexDirection: "row", justifyContent: 'space-between', alignItems: "center", borderRadius: 20 }}>
     <View style={{ width: 130, margin: 10 }}>
         <View style={{ backgroundColor: "white", borderRadius: 10, paddingHorizontal: 10, paddingVertical: 5 }}>
             <Text style={{ color: "black" }}>gopay</Text>
             <Text style={{ color: "black", fontSize: 18, fontWeight: "bold" }}>Rp22.976</Text>
-            <Text style={{ color: "green" }}>Klik & cek riwayat</Text>
+            <Text style={{ color: appItem.colorTheme }}>Klik & cek riwayat</Text>
         </View>
     </View>
     <View style={{ flex: 1, flexDirection: "row", justifyContent: "space-between", alignContent: "center" }}>

@@ -5,16 +5,16 @@ const clickApps = () => {
     return alert("its OK")
 }
 
-const Apps = () => {
+const Apps = ({ nav }) => {
     const AppOne = () =>
         <View style={{ marginTop: 10, flexDirection: "row", justifyContent: 'space-between' }} >
 
-                <TouchableHighlight onPress={clickApps} underlayColor="white">
-                    <View style={{}}>
-                        <Image source={{ uri: "https://s2.bukalapak.com/img/29522375692/large/data.png" }} style={{ borderRadius: 10, width: 50, height: 50 }} />
-                        <Text style={{ textAlign: "center", marginTop: 5 }}>Go Ride</Text>
-                    </View>
-                </TouchableHighlight>
+            <TouchableHighlight onPress={() => nav.navigate("Login")} underlayColor="white">
+                <View style={{}}>
+                    <Image source={{ uri: "https://s2.bukalapak.com/img/29522375692/large/data.png" }} style={{ borderRadius: 10, width: 50, height: 50 }} />
+                    <Text style={{ textAlign: "center", marginTop: 5 }}>Go Ride</Text>
+                </View>
+            </TouchableHighlight>
 
         </View>
 

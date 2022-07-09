@@ -1,17 +1,21 @@
 import React from 'react';
-import { Text, View, Image } from 'react-native';
+import { Text, View, Image, SafeAreaView, ScrollView } from 'react-native';
 import Apps from './apps';
 import Gopay from './gopay';
 import Header from './header';
-const Home = () => {
+
+
+
+const Home = ({ navigation }) => {
     return (
-        <View>
-            <Header />
-            <View style={{ padding: 20 }} >
+        <>
+            <ScrollView style={{ padding: 20 }}>
                 <Gopay />
-                <Apps />
-            </View>
-        </View>
+                <Apps nav={navigation} />
+            </ScrollView>
+        </>
+
+
     )
 }
 

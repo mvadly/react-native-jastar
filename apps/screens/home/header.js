@@ -1,6 +1,7 @@
 import React from "react";
 import { View, TextInput, Button, Image, StyleSheet } from "react-native";
 import Icon from "react-native-vector-icons/Ionicons";
+import appItem from "../../../app.json"
 import Gap from "../../components/atom/gap"
 
 
@@ -40,7 +41,7 @@ const Header = () => {
     return <View style={{
         paddingHorizontal: 10,
         paddingVertical: 8,
-        backgroundColor: "green",
+        backgroundColor: appItem.colorTheme,
         flexDirection: "row",
     }}>
        <View style={styles.iconSection}>

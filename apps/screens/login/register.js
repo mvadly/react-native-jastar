@@ -21,15 +21,17 @@ const style = StyleSheet.create({
     }
 })
 
-const Login = ({ navigation }) => {
+const Register = ({ navigation }) => {
     return (
         <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
             <View style={{ paddingHorizontal: 20 }}>
                 <View>
                     <Text style={style.appTitle}>{appItem.displayName}</Text>
                 </View>
-                <TextInput placeholder="Username" style={style.input} />
+                <TextInput placeholder="Nama Lengkap" style={style.input} />
+                <TextInput placeholder="Email" style={style.input} />
                 <TextInput secureTextEntry={true} placeholder="Password" style={style.input} />
+                <TextInput secureTextEntry={true} placeholder="Konfirmasi Password" style={style.input} />
 
                 <TouchableOpacity
                     style={{
@@ -42,13 +44,13 @@ const Login = ({ navigation }) => {
                     }}
                     onPress={() => navigation.navigate('Home')}
                 >
-                    <Text style={{ color: 'white', padding: 15, fontSize:20,fontWeight:"bold"}}>Masuk</Text>
+                    <Text style={{ color: 'white', padding: 15, fontSize: 20, fontWeight: "bold" }}>Daftar</Text>
                 </TouchableOpacity>
+                <Text style={{ textAlign: "center" }}>Apakah sudah memiliki akun? <Text style={{ color: "blue" }} onPress={() => navigation.navigate("Register")}>Klik disini</Text> untuk masuk ke akun anda</Text>
 
-                <Text style={{ textAlign: "center" }}>Apakah belum mempunyai akun? <Text style={{ color: "blue" }} onPress={() => navigation.navigate("Register")}>Klik disini</Text> untuk membuat akun</Text>
             </View>
         </View>
     )
 }
 
-export default Login
+export default Register
