@@ -1,7 +1,7 @@
 import React from "react";
 import { View, TextInput, Button, Image, StyleSheet } from "react-native";
 import Icon from "react-native-vector-icons/Ionicons";
-import Gap from "../atom/gap";
+import Gap from "../../components/atom/gap"
 
 
 
